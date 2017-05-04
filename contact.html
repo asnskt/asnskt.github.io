@@ -18,6 +18,10 @@ Author URL: http://gautampandey.com
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
+  <!-- custom scripts add -->
+<script type="text/javascript" src="js/common.js"></script>
+
 	<!-- Custom Theme files -->
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<!-- Custom Theme files -->
@@ -49,12 +53,20 @@ Author URL: http://gautampandey.com
 			</div>
 			<div class="top-nav">
 				<span class="menu"> </span>
-				<ul>
+				<ul class="menu-nav">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="services.html">Gallery</a></li>
-					<li><a  data-toggle="modal" data-target="#resultModal">Results</a></li>	
-					<li class="active"><a href="contact.html">Contact</a></li>		
+					<!-- <li><a  data-toggle="modal" data-target="#resultModal">Results</a></li>	 -->
+				   <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">Results
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a  data-toggle="modal" data-target="#resultModalBatch1">Batch1</a></li>
+                    <li><a  data-toggle="modal" data-target="#resultModalBatch2">Batch2</a></li>
+                  </ul>  
+              </li> 
+        	<li class="active"><a href="contact.html">Contact</a></li>		
 				</ul>
 				<!-- script-nav -->
 				<script>
@@ -72,8 +84,10 @@ Author URL: http://gautampandey.com
 	<script>
 		$(document).ready(function(){
 			$(".top-nav li a").click(function(){
-				$(this).parent().addClass("active");
-				$(this).parent().siblings().removeClass("active");
+				if(!$(this).parent().hasClass("dropdown")){
+              $(this).parent().addClass("active");
+              $(this).parent().siblings().removeClass("active");
+            }
 			});
 		});
 	</script>
@@ -225,8 +239,8 @@ Author URL: http://gautampandey.com
 
 
 	
-<!-- Modal -->
-  <div class="modal fade" id="resultModal" role="dialog">
+<!-- Modal Batch1-->
+  <div class="modal fade" id="resultModalBatch1" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -624,12 +638,290 @@ Author URL: http://gautampandey.com
     </div>
   </div>
 
+
+  <!-- Modal Batch2 -->
+  <div class="modal fade" id="resultModalBatch2" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+           <center class="modal-title" > <h1 >Abhudyay Skill Development</h1>
+                <p><h4>Center - Kopaganj<br>
+                      Batch - 3<br>
+              RESULT SHEET 2015 - 2016</h4></p>
+          </center>
+          
+        </div>
+        <div class="modal-body">
+         
+
+   <!-- batch 2 table start from here -->
+   <table id="resultTable2" class="table table-bordered table-hover">
+    <thead>
+      <tr>
+      <th>Enroll No.</th>
+      <th>Student Name</th>
+      <th>Father/Husb's Name</th>
+      <th>Theory</th>
+      <th>Practical Extra Act</th>
+      <th>Grade</th>
+      <th>Course 3+1 Month</th>
+      </tr>
+    </thead>
+   
+    <tbody>
+      
+      <tr>
+      <td>1600101</td>
+       <td>Poonam Chauhan</td>
+        <td>Ramker Chauhan</td>
+        <td>86</td>
+       <td>90</td>
+        <td>A+</td>
+        <td>BHC+MEHD</td>
+      </tr>
+     
+      
+      <tr>
+      <td>1600102</td>
+       <td>Neha Jaiswal</td>
+       <td>Sanjay Jaiswal</td>
+        <td>78</td>
+        <td>80</td>
+       <td>A</td>
+        <td>BHC</td>
+       
+      </tr>
+     
+      <tr>
+      <td>1600103</td>
+       <td>Sunita Pandey</td>
+        <td>Amresh Pandey</td>
+        <td>86</td>
+       <td>80</td>
+        <td>A+</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600104</td>
+      <td>Ku. Alka</td>
+       <td>Shriran</td>
+        <td>72</td>
+        <td>80</td>
+       <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600105</td>
+       <td>Mamata Kumari</td>
+        <td>Jiut Ram</td>
+        <td>74</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600106</td>
+       <td>Kanak Lata</td>
+        <td>Guru Govind</td>
+        <td>80</td>
+       <td>80</td>
+        <td>A+</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600107</td>
+       <td>Ku. Sushma</td>
+        <td>Sharvan Kumar</td>
+        <td>74</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600108</td>
+       <td>Ku. Kushaboo</td>
+        <td>Ramkaran Ram</td>
+        <td>74</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600109</td>
+       <td>Manjoosha Bharti</td>
+        <td>Manoj Kumar</td>
+        <td>84</td>
+       <td>90</td>
+        <td>A+</td>
+        <td>BHC+MEHD</td>
+      </tr>
+     
+      <tr>
+      <td>1600110</td>
+       <td>Simpi Gupta</td>
+        <td>Prem Chand Gupta</td>
+        <td>78</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600111</td>
+       <td>Sriddhi Gupta</td>
+        <td>Sanjay Gupta</td>
+        <td>78</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600112</td>
+       <td>Pallavi Mishra</td>
+        <td>Anil Mishra</td>
+        <td>80</td>
+       <td> 85 </td>
+        <td>A+</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600113</td>
+       <td>Poonam Gupta</td>
+        <td>Lallen Prasad Gupta</td>
+        <td>76</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600114</td>
+       <td>Priyanka Prajapati</td>
+        <td>Ajay Prajapati</td>
+        <td>78</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600115</td>
+       <td>Ku. Kavita</td>
+        <td>Ajay Prajapati</td>
+        <td>84</td>
+       <td>80</td>
+        <td>A+</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600116</td>
+       <td>Nitu Kumari</td>
+        <td>Vinod Kumar</td>
+        <td>76</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600117</td>
+       <td>Kusam Lata Chaudhari</td>
+        <td>Ram Dulare Ram</td>
+        <td> 74 </td>
+       <td> 80 </td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600118</td>
+       <td>Rachana Maurya</td>
+        <td>Sunil Maurya</td>
+        <td>78</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600119</td>
+       <td>Ku. Reenu</td>
+        <td>Tarachand</td>
+        <td> 78 </td>
+       <td> 80 </td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600120</td>
+       <td>Madhu Modanvai</td>
+        <td>Alok Prasad Modanvai</td>
+        <td>78</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC </td>
+      </tr>
+     
+      <tr>
+      <td>1600121</td>
+       <td>Poonam Shahani</td>
+        <td>Achchhelal Shahani</td>
+        <td>76</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600123</td>
+       <td>Poonam Pandey</td>
+        <td>Kaushal Kishor Pandey</td>
+        <td>60</td>
+       <td>70</td>
+        <td>B+</td>
+        <td>BHC</td>
+      </tr>
+     
+      <tr>
+      <td>1600124</td>
+       <td>Gudiya Chauhan</td>
+        <td>Kedar Chauhan</td>
+        <td>74</td>
+       <td>80</td>
+        <td>A</td>
+        <td>BHC</td>
+      </tr>
+     
+    </tbody>
+  </table>
+      <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
   
 <script type="text/javascript" src="js/dataTables.min.js"></script>
 
  <script>
   $(function(){
     $("#resultTable").dataTable();
+    $("#resultTable2").dataTable();
   })
   </script>
 

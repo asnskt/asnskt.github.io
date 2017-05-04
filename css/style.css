@@ -103,6 +103,12 @@ span.main {
 	-ms-transform: rotateY(70deg);
 	transform: rotateY(70deg);
 }
+/*stop dropdown-menu css transform*/
+ul li.dropdown.active,.menu-nav ul.dropdown-menu li.active a,.menu-nav ul.dropdown-menu li a:hover{
+	background:#ffde00;
+	transform: none;
+}
+
 .border-side{
 	position: absolute;
 	border-right: 1px solid #FFF;
@@ -1453,4 +1459,12 @@ label.btn1.btn2.btn-8.btn-8c {
 
 a#resultTable_next {
     float: right;
+}
+a#resultTable2_next {
+    float: right;
+}
+
+
+ul.dropdown-menu{
+	background:#2cb149;
 }
